@@ -11,50 +11,43 @@ Zasady gry w życie Conwaya:
 Martwa komórka z dokładnie trzema żywymi sąsiadami staje się żywa (reprodukcja).
 
 
-Przykład kodu DO SPRAWDZENIA PRZEZ NASTKĘ Z JEJ KODEM
+Przegląd kodu
+Importowanie bibliotek:
 
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
+numpy (alias np) jest używany do operacji na tablicach i macierzach.
 
-# Rozmiar planszy
-N = 100
+pygame (alias pg) jest używany do tworzenia okienka graficznego i interakcji.
 
-# Funkcja tworząca początkowy układ
-def initial_state(N):
-    return np.random.choice([0, 1], size=(N, N))
+Ustawienia początkowe:
 
-# Funkcja aktualizująca planszę
-def update(frameNum, img, grid, N):
-    newGrid = grid.copy()
-    for i in range(N):
-        for j in range(N):
-            total = int((grid[i, (j-1)%N] + grid[i, (j+1)%N] +
-                         grid[(i-1)%N, j] + grid[(i+1)%N, j] +
-                         grid[(i-1)%N, (j-1)%N] + grid[(i-1)%N, (j+1)%N] +
-                         grid[(i+1)%N, (j-1)%N] + grid[(i+1)%N, (j+1)%N])/255)
-            if grid[i, j] == ON:
-                if (total < 2) or (total > 3):
-                    newGrid[i, j] = OFF
-            else:
-                if total == 3:
-                    newGrid[i, j] = ON
-    img.set_data(newGrid)
-    grid[:] = newGrid[:]
-    return img,
+Definicja szerokości (a) i wysokości (b) ekranu.
 
-# Main code
-ON = 255
-OFF = 0
-vals = [ON, OFF]
+Rozmiar pojedynczej komórki (cellrozmiar).
 
-grid = initial_state(N)
+Liczba komórek na siatce w pionie (a_siatki) i poziomie (b_siatki).
 
-fig, ax = plt.subplots()
-img = ax.imshow(grid, interpolation='nearest')
-ani = animation.FuncAnimation(fig, update, fargs=(img, grid, N, ),
-                              frames=10,
-                              interval=50,
-                              save_count=50)
+Ustawienie liczby klatek na sekundę (FPS).
 
-plt.show()
+Kolory:
+
+Kolory tła, siatki, komórek i inne są zdefiniowane w formacie RGB.
+
+Inicjalizacja pygame:
+
+Tworzenie okna gry i ustawianie ikonki oraz tytułu okna.
+
+Siatka:
+
+Tablica siatka jest inicjalizowana zerami, co oznacza, że na początku wszystkie komórki są martwe.
+
+Funkcja lewomouse:
+
+Obsługuje naciśnięcie lewego przycisku myszy i zmienia stan komórek na żywe w miejscu, gdzie kliknięto.
+
+Główna pętla gry (while running):
+
+Odświeża ekran, obsługuje zdarzenia (np. zamknięcie okna).
+
+Rysuje komórki na ekranie.
+
+Aktualizuje stan każdej komórki na podstawie liczby żywych sąsiadów zgodnie z zasadami gry w życie Conwaya.
