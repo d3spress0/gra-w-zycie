@@ -51,3 +51,8 @@ Odświeża ekran, obsługuje zdarzenia (np. zamknięcie okna).
 Rysuje komórki na ekranie.
 
 Aktualizuje stan każdej komórki na podstawie liczby żywych sąsiadów zgodnie z zasadami gry w życie Conwaya.
+
+Autorzy projektu:
+- Natalia Gała
+- Nastia Khomenko
+- Zuzanna Seniuk
