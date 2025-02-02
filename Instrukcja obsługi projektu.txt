@@ -1,6 +1,7 @@
 Instrukcja obsługi projektu 
     1.Otwarcie folderu środowiska wirtualnego
     2.Otworzeniu w nim pliku kodu z gra (gra1)
+    3.W linijce 15 kodu został popełniony bład aby projekt działał należy usunąć litere "z" która występuje w K=(0,0,0)z
     *w reszcie folderu sa pliki zwaizane ze środowiskiem wirtualnym venv
     
 
