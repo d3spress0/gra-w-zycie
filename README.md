@@ -54,5 +54,5 @@ Aktualizuje stan każdej komórki na podstawie liczby żywych sąsiadów zgodnie
 
 Autorzy projektu:
 - Natalia Gała
-- Nastia Khomenko
+- Anastasiia Khomenko
 - Zuzanna Seniuk
