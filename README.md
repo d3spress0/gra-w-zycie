@@ -1,4 +1,4 @@
-# Project "Gra w zycie"
+# Project "Gra w życie"
 ### Temat projektu
 Gra w życie (The game of life) - automat komórkowy Johna Conwaya.
 ### Zasady gry
