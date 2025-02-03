@@ -1,8 +1,15 @@
-## Instrukcja obsługi projektu
-C:\Users\brian\Downloads\Srodowisko wirtualne (gra)\Srodowisko wirtualne\venv\Lib\site-packages
-1. Pobranie pliku "Srodowisko wirtualne (gra)", "pygame", "numpy".
-2. Rozpakowanie pliku "Srodowisko wirtualne (gra)" do folderu, ktory jest komfortowy dla uzytnika.
-2. Rozpakowanie plików "pygame" oraz "numpy" do folderu z adresem "C:\ *"adres z dysku C do folderu "Srodowisko wirtualne (gra)" u uzytkwnika na komputerze"* \Srodowisko wirtualne (gra)\Srodowisko wirtualne\venv\Lib\site-packages".
-3. Otworzenie folderu "Srodowisko wirtualne (gra)".
-4. Otworzenie folderu "Srodowisko wirtualne".
-5. Otworzeniu w nim pliku kodu z grą "Gra do srodowiska wirtualnego" (w reszcie folderu są pliki związane ze środowiskiem wirtualnym venv).
+## Instrukcja obsługi projektu Gra w życie
+### 1. Pobierz repozytorium [tutaj](https://github.com/d3spress0/gra-w-zycie.git)
+1) rozpakuj plik gra-w-zycie-main.zip
+2) otwórz Git Bash, Git CMD lub CMD(terminal)
+
+### 2. Stwórz środowisko myenv w Git Bashu, Git CMD lub CMD(terminal):
+1) wpisz `cd C:\sziezka\do\rozpakowanego\pliku\gra-w-zycie-main.zip`  
+2) dalej wpisz `python -m venv myenv`   
+3) dalej wpisz `myenv\Scripts\activate` (na systemie Windows) lub `source myenv/bin/activate` (na systemie Unix albo MacOS)  
+
+### 3. Instalowanie dodatkowych bibliotek (numpy i pygame) w Git Bashu, Git CMD lub CMD(terminal):
+1) wpisz `pip install -r requirements.txt`
+
+### 3. Uruchomienie gry w Git Bashu, Git CMD lub CMD(terminal):
+1) wpisz `python gameoflife.py`
